@@ -1,4 +1,4 @@
-FROM radut/ubuntu-java8
+FROM radut/ubuntu-java9
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG MAVEN_VERSION=3.5.2
