@@ -1,6 +1,8 @@
 FROM radut/ubuntu-ssh-rsync-curl
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install python-software-properties software-properties-common curl && \
