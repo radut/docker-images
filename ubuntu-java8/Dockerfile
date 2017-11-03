@@ -1,4 +1,4 @@
-FROM radut/ubuntu-ssh-rsync-curl
+FROM radut/ubuntu-ssh-rsync-curl-git
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
