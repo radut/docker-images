@@ -1,4 +1,4 @@
-FROM radut/ubuntu-ssh-rsync-curl-git
+FROM radut/ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ENV JAVA_HOME /usr/lib/jvm/java-9-oracle
