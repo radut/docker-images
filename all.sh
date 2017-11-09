@@ -4,21 +4,21 @@ pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca
 bash build.sh
 popd
 
-pusd ubuntu-oracle-java8-letsencrypt_ca
+pushd ubuntu-oracle-java8-letsencrypt_ca
 bash build.sh
 popd
 
-pusd ubuntu-oracle-java8-letsencrypt_ca-maven
-bash build.sh
-popd
-
-
-pusd ubuntu-oracle-java9-letsencrypt_ca
+pushd ubuntu-oracle-java8-letsencrypt_ca-maven
 bash build.sh
 popd
 
 
-pusd ubuntu-oracle-java9-letsencrypt_ca-maven
+pushd ubuntu-oracle-java9-letsencrypt_ca
+bash build.sh
+popd
+
+
+pushd ubuntu-oracle-java9-letsencrypt_ca-maven
 bash build.sh
 popd
 
@@ -37,20 +37,20 @@ pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca
 bash push.sh
 popd
 
-pusd ubuntu-oracle-java8-letsencrypt_ca
+pushd ubuntu-oracle-java8-letsencrypt_ca
 bash push.sh
 popd
 
-pusd ubuntu-oracle-java8-letsencrypt_ca-maven
-bash push.sh
-popd
-
-
-pusd ubuntu-oracle-java9-letsencrypt_ca
+pushd ubuntu-oracle-java8-letsencrypt_ca-maven
 bash push.sh
 popd
 
 
-pusd ubuntu-oracle-java9-letsencrypt_ca-maven
+pushd ubuntu-oracle-java9-letsencrypt_ca
+bash push.sh
+popd
+
+
+pushd ubuntu-oracle-java9-letsencrypt_ca-maven
 bash push.sh
 popd
