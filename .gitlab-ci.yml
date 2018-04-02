@@ -16,6 +16,7 @@ build:
   tags:
     - radut-docker-ci
   script:
+    - set -euxo pipefail
     - bash build-all.sh
 
 
@@ -28,5 +29,6 @@ push:
   tags:
     - radut-docker-ci
   script:
+    - set -euxo pipefail
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push-all.sh
