@@ -1,0 +1,28 @@
+variables:
+  DOCKER_DRIVER: overlay2
+  GIT_SSL_NO_VERIFY: "1"
+
+
+stages:
+  - build
+  - push
+
+
+build:
+  image: google/cloud-sdk:latest
+  stage: build
+  retry: 2
+  allow_failure: false
+  script:
+    - bash build-all.sh
+
+
+push:
+  image: google/cloud-sdk:latest
+  stage: push
+  when: manual
+  retry: 2
+  allow_failure: false
+  script:
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push-all.sh
