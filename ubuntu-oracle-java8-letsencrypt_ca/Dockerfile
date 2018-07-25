@@ -25,3 +25,4 @@ RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certific
 RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x2-cross-signed.crt -alias lets-encrypt-x2-cross-signed -keystore /usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts
 RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x3-cross-signed.crt -alias lets-encrypt-x3-cross-signed -keystore /usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts
 RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x4-cross-signed.crt -alias lets-encrypt-x4-cross-signed -keystore /usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/IdenTrust-root.crt -alias IdenTrust-root -keystore /usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts
