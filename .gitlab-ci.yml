@@ -12,8 +12,6 @@ build:
   stage: build
   retry: 2
   allow_failure: false
-  tags:
-    - radut-docker-ci
   script:
     - set -euxo pipefail
     - bash build-all.sh
