@@ -8,7 +8,12 @@ pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-mtr
 bash build.sh
 popd
 
+
 pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible
+bash build.sh
+popd
+
+pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible-2.6
 bash build.sh
 popd
 
