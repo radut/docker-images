@@ -10,7 +10,6 @@ stages:
 build:
   image: google/cloud-sdk:latest
   stage: build
-  retry: 2
   allow_failure: false
   script:
     - set -euxo pipefail
