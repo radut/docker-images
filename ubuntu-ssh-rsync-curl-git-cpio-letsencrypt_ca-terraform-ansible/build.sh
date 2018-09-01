@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t radut/ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible:dev .
+docker build -t radut/ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible .
