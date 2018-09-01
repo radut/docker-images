@@ -12,7 +12,7 @@ pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible
 bash push.sh
 popd
 
-pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible-2.6
+pushd ubuntu-ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible-dev
 bash push.sh
 popd
 
