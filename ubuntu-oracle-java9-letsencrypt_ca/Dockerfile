@@ -5,7 +5,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-9-oracle
 
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install python-software-properties software-properties-common curl && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common curl && \
   echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \

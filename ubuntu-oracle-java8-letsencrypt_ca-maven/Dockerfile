@@ -1,7 +1,7 @@
 FROM radut/ubuntu-oracle-java8-letsencrypt_ca
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-ARG MAVEN_VERSION=3.5.2
+ARG MAVEN_VERSION=3.5.4
 
 ENV MAVEN_HOME /usr/share/maven
 
