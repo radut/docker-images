@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install rsync curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 pbr hvac ansible-modules-hashivault netaddr yasha git+https://github.com/ansible/ansible.git@devel os_client_config==1.28.0 shade==1.26.0 netaddr notario
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 pbr hvac ansible-modules-hashivault netaddr yasha git+https://github.com/ansible/ansible.git@devel os_client_config==1.28.0 shade==1.26.0 netaddr notario
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
