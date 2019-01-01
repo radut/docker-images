@@ -7,6 +7,7 @@ stages:
   - build
   - step1
   - step2
+  - step3
 
 
 ubuntu-ssh-rsync-curl-git-cpio:
@@ -60,7 +61,7 @@ openjdk-8:
 
 oracle-java8-maven:
   image: google/cloud-sdk:latest
-  stage: step1
+  stage: step2
   allow_failure: false
   script:
     - set -euxo pipefail
@@ -72,7 +73,7 @@ oracle-java8-maven:
 
 openjdk-8-maven:
   image: google/cloud-sdk:latest
-  stage: step1
+  stage: step2
   allow_failure: false
   script:
     - set -euxo pipefail
@@ -84,7 +85,7 @@ openjdk-8-maven:
 
 oracle-java8-maven-node:
   image: google/cloud-sdk:latest
-  stage: step2
+  stage: step3
   allow_failure: false
   script:
     - set -euxo pipefail
@@ -96,7 +97,7 @@ oracle-java8-maven-node:
 
 openjdk-8-maven-node:
   image: google/cloud-sdk:latest
-  stage: step2
+  stage: step3
   allow_failure: false
   script:
     - set -euxo pipefail
