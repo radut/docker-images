@@ -34,18 +34,6 @@ terraform-ansible:
     - bash push.sh
     - popd
 
-oracle-java8:
-  image: google/cloud-sdk:latest
-  stage: step1
-  allow_failure: false
-  script:
-    - set -euxo pipefail
-    - pushd ubuntu-oracle-java8-letsencrypt_ca
-    - bash build.sh
-    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-    - bash push.sh
-    - popd
-
 openjdk-8:
   image: google/cloud-sdk:latest
   stage: step1
@@ -58,14 +46,25 @@ openjdk-8:
     - bash push.sh
     - popd
 
-
-oracle-java8-maven:
+openjdk-11:
   image: google/cloud-sdk:latest
-  stage: step2
+  stage: step1
   allow_failure: false
   script:
     - set -euxo pipefail
-    - pushd ubuntu-oracle-java8-letsencrypt_ca-maven
+    - pushd ubuntu-openjdk-java11-letsencrypt_ca
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
+oracle-java8:
+  image: google/cloud-sdk:latest
+  stage: step1
+  allow_failure: false
+  script:
+    - set -euxo pipefail
+    - pushd ubuntu-oracle-java8-letsencrypt_ca
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
@@ -83,13 +82,25 @@ openjdk-8-maven:
     - bash push.sh
     - popd
 
-oracle-java8-maven-node:
+openjdk-11-maven:
   image: google/cloud-sdk:latest
-  stage: step3
+  stage: step2
   allow_failure: false
   script:
     - set -euxo pipefail
-    - pushd ubuntu-oracle-java8-letsencrypt_ca-maven-node-lts
+    - pushd ubuntu-openjdk-java11-letsencrypt_ca-maven
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
+oracle-java8-maven:
+  image: google/cloud-sdk:latest
+  stage: step2
+  allow_failure: false
+  script:
+    - set -euxo pipefail
+    - pushd ubuntu-oracle-java8-letsencrypt_ca-maven
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
@@ -102,6 +113,30 @@ openjdk-8-maven-node:
   script:
     - set -euxo pipefail
     - pushd ubuntu-openjdk-java8-letsencrypt_ca-maven-node-lts
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
+openjdk-11-maven-node:
+  image: google/cloud-sdk:latest
+  stage: step3
+  allow_failure: false
+  script:
+    - set -euxo pipefail
+    - pushd ubuntu-openjdk-java11-letsencrypt_ca-maven-node-lts
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
+oracle-java8-maven-node:
+  image: google/cloud-sdk:latest
+  stage: step3
+  allow_failure: false
+  script:
+    - set -euxo pipefail
+    - pushd ubuntu-oracle-java8-letsencrypt_ca-maven-node-lts
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
