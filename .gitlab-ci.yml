@@ -61,7 +61,7 @@ openjdk-11:
 oracle-jdk8:
   image: google/cloud-sdk:latest
   stage: step1
-  allow_failure: false
+  allow_failure: true
   script:
     - set -euxo pipefail
     - pushd oracle-jdk8
