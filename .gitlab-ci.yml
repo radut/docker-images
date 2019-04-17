@@ -97,7 +97,7 @@ openjdk-11-maven:
 oracle-jdk8-maven:
   image: google/cloud-sdk:latest
   stage: step2
-  allow_failure: false
+  allow_failure: true
   script:
     - set -euxo pipefail
     - pushd oracle-jdk8-maven
@@ -133,7 +133,7 @@ openjdk-11-maven-nodejs:
 oracle-jdk8-maven-nodejs:
   image: google/cloud-sdk:latest
   stage: step3
-  allow_failure: false
+  allow_failure: true
   script:
     - set -euxo pipefail
     - pushd oracle-jdk8-maven-nodejs
