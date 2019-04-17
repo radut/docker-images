@@ -1,45 +1,45 @@
 #!/bin/bash
 
-pushd ssh-rsync-curl-git-cpio-letsencrypt_ca
+pushd ubuntu
 bash push.sh
 popd
 
-pushd ssh-rsync-curl-git-cpio-letsencrypt_ca-terraform-ansible
+pushd terraform-ansible
 bash push.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca
+pushd openjdk-8
 bash push.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca-maven
+pushd openjdk-8-maven
 bash push.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca-maven-node-lts
+pushd openjdk-8-maven-nodejs
 bash push.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca
+pushd openjdk-11
 bash push.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca-maven
+pushd openjdk-11-maven
 bash push.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca-maven-node-lts
+pushd openjdk-11-maven-nodejs
 bash push.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca
+pushd oracle-jdk8
 bash push.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca-maven
+pushd oracle-jdk8-maven
 bash push.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca-maven-node-lts
+pushd oracle-jdk8-maven-nodejs
 bash push.sh
 popd

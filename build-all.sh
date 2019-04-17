@@ -8,38 +8,38 @@ pushd terraform-ansible
 bash build.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca
+pushd openjdk-8
 bash build.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca-maven
+pushd openjdk-8-maven
 bash build.sh
 popd
 
-pushd openjdk-java8-letsencrypt_ca-maven-node-lts
+pushd openjdk-8-maven-nodejs
 bash build.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca
+pushd openjdk-11
 bash build.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca-maven
+pushd openjdk-11-maven
 bash build.sh
 popd
 
-pushd openjdk-java11-letsencrypt_ca-maven-node-lts
+pushd openjdk-11-maven-nodejs
 bash build.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca
+pushd oracle-jdk8
 bash build.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca-maven
+pushd oracle-jdk8-maven
 bash build.sh
 popd
 
-pushd oracle-java8-letsencrypt_ca-maven-node-lts
+pushd oracle-jdk8-maven-nodejs
 bash build.sh
 popd
