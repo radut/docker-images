@@ -1,4 +1,4 @@
-FROM radut/openjdk-java11-letsencrypt_ca-maven
+FROM radut/openjdk-11-maven
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 RUN groupadd --gid 1000 node \

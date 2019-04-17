@@ -24,7 +24,7 @@ ubuntu:
 
 terraform-ansible:
   image: google/cloud-sdk:latest
-  stage: step1
+  stage: build
   allow_failure: false
   script:
     - set -euxo pipefail

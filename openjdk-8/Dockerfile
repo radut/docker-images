@@ -1,4 +1,4 @@
-FROM radut/ssh-rsync-curl-git-cpio-letsencrypt_ca
+FROM radut/ubuntu
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 

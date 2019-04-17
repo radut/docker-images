@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t radut/oracle-java8-letsencrypt_ca-maven-node-lts .
+docker build -t radut/oracle-jdk8-maven-nodejs .

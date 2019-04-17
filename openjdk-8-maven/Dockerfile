@@ -1,4 +1,4 @@
-FROM radut/openjdk-java8-letsencrypt_ca
+FROM radut/openjdk-8
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG MAVEN_VERSION=3.5.4

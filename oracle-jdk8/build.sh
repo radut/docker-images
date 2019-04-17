@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t radut/oracle-java8-letsencrypt_ca .
+docker build -t radut/oracle-jdk8 .

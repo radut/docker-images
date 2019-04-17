@@ -1,4 +1,4 @@
-FROM radut/oracle-java8-letsencrypt_ca
+FROM radut/oracle-jdk8
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG MAVEN_VERSION=3.5.4

@@ -1,4 +1,4 @@
-FROM radut/openjdk-java11-letsencrypt_ca
+FROM radut/openjdk-11
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG MAVEN_VERSION=3.5.4

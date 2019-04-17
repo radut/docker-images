@@ -1,2 +1,2 @@
 #!/bin/bash
-docker push radut/openjdk-java11-letsencrypt_ca-maven
+docker push radut/openjdk-11-maven

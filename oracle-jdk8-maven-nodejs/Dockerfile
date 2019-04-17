@@ -1,4 +1,4 @@
-FROM radut/oracle-java8-letsencrypt_ca-maven
+FROM radut/oracle-jdk8-maven
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 RUN groupadd --gid 1000 node \
