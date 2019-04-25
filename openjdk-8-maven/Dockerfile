@@ -1,7 +1,7 @@
 FROM radut/openjdk-8
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-ARG MAVEN_VERSION=3.5.4
+ARG MAVEN_VERSION=3.6.1
 
 ENV MAVEN_HOME /usr/share/maven
 
