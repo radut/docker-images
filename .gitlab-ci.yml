@@ -58,17 +58,17 @@ openjdk-11:
     - bash push.sh
     - popd
 
-oracle-jdk8:
-  image: google/cloud-sdk:latest
-  stage: step1
-  allow_failure: true
-  script:
-    - set -euxo pipefail
-    - pushd oracle-jdk8
-    - bash build.sh
-    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-    - bash push.sh
-    - popd
+#oracle-jdk8:
+#  image: google/cloud-sdk:latest
+#  stage: step1
+#  allow_failure: true
+#  script:
+#    - set -euxo pipefail
+#    - pushd oracle-jdk8
+#    - bash build.sh
+#    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+#    - bash push.sh
+#    - popd
 
 openjdk-8-maven:
   image: google/cloud-sdk:latest
@@ -94,17 +94,17 @@ openjdk-11-maven:
     - bash push.sh
     - popd
 
-oracle-jdk8-maven:
-  image: google/cloud-sdk:latest
-  stage: step2
-  allow_failure: true
-  script:
-    - set -euxo pipefail
-    - pushd oracle-jdk8-maven
-    - bash build.sh
-    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-    - bash push.sh
-    - popd
+#oracle-jdk8-maven:
+#  image: google/cloud-sdk:latest
+#  stage: step2
+#  allow_failure: true
+#  script:
+#    - set -euxo pipefail
+#    - pushd oracle-jdk8-maven
+#    - bash build.sh
+#    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+#    - bash push.sh
+#    - popd
 
 openjdk-8-maven-nodejs:
   image: google/cloud-sdk:latest
@@ -130,14 +130,14 @@ openjdk-11-maven-nodejs:
     - bash push.sh
     - popd
 
-oracle-jdk8-maven-nodejs:
-  image: google/cloud-sdk:latest
-  stage: step3
-  allow_failure: true
-  script:
-    - set -euxo pipefail
-    - pushd oracle-jdk8-maven-nodejs
-    - bash build.sh
-    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-    - bash push.sh
-    - popd
+#oracle-jdk8-maven-nodejs:
+#  image: google/cloud-sdk:latest
+#  stage: step3
+#  allow_failure: true
+#  script:
+#    - set -euxo pipefail
+#    - pushd oracle-jdk8-maven-nodejs
+#    - bash build.sh
+#    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+#    - bash push.sh
+#    - popd
