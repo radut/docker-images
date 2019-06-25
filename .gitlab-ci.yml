@@ -15,7 +15,6 @@ ubuntu:
   stage: build
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd ubuntu
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -27,7 +26,6 @@ terraform-ansible:
   stage: build
   allow_failure: true
   script:
-    - set -euxo pipefail
     - pushd terraform-ansible
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -39,7 +37,6 @@ openjdk-8:
   stage: step1
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-8
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -51,7 +48,6 @@ openjdk-11:
   stage: step1
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-11
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -63,7 +59,6 @@ openjdk-11:
 #  stage: step1
 #  allow_failure: true
 #  script:
-#    - set -euxo pipefail
 #    - pushd oracle-jdk8
 #    - bash build.sh
 #    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -75,7 +70,6 @@ openjdk-8-maven:
   stage: step2
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-8-maven
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -87,7 +81,6 @@ openjdk-11-maven:
   stage: step2
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-11-maven
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -99,7 +92,6 @@ openjdk-11-maven:
 #  stage: step2
 #  allow_failure: true
 #  script:
-#    - set -euxo pipefail
 #    - pushd oracle-jdk8-maven
 #    - bash build.sh
 #    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -111,7 +103,6 @@ openjdk-8-maven-nodejs:
   stage: step3
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-8-maven-nodejs
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -123,7 +114,6 @@ openjdk-11-maven-nodejs:
   stage: step3
   allow_failure: false
   script:
-    - set -euxo pipefail
     - pushd openjdk-11-maven-nodejs
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
@@ -135,7 +125,6 @@ openjdk-11-maven-nodejs:
 #  stage: step3
 #  allow_failure: true
 #  script:
-#    - set -euxo pipefail
 #    - pushd oracle-jdk8-maven-nodejs
 #    - bash build.sh
 #    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
