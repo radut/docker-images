@@ -6,7 +6,7 @@ ARG ANSIBLE_VERSION=2.7.8.0
 ARG TERRAFORM_VERSION=0.11.11
 
 ARG KUBECTL_VERSION=v1.15.0
-ARG HELM_VERSION=v2.14.1
+ARG HELM_VERSION=v2.14.0
 
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 pbr hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config==1.28.0 shade==1.26.0 netaddr notario openstacksdk python-openstacksdk python-openstackclient
