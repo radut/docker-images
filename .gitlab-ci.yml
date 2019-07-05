@@ -13,6 +13,7 @@ stages:
 ubuntu:
   image: google/cloud-sdk:latest
   stage: build
+  artifacts: {}
   allow_failure: false
   script:
     - pushd ubuntu
@@ -24,6 +25,7 @@ ubuntu:
 terraform-ansible:
   image: google/cloud-sdk:latest
   stage: build
+  artifacts: {}
   allow_failure: true
   script:
     - pushd terraform-ansible
@@ -35,6 +37,7 @@ terraform-ansible:
 openjdk-8:
   image: google/cloud-sdk:latest
   stage: step1
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-8
@@ -46,6 +49,7 @@ openjdk-8:
 openjdk-11:
   image: google/cloud-sdk:latest
   stage: step1
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-11
@@ -57,6 +61,7 @@ openjdk-11:
 #oracle-jdk8:
 #  image: google/cloud-sdk:latest
 #  stage: step1
+#  artifacts: {}
 #  allow_failure: true
 #  script:
 #    - pushd oracle-jdk8
@@ -68,6 +73,7 @@ openjdk-11:
 openjdk-8-maven:
   image: google/cloud-sdk:latest
   stage: step2
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-8-maven
@@ -79,6 +85,7 @@ openjdk-8-maven:
 openjdk-11-maven:
   image: google/cloud-sdk:latest
   stage: step2
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-11-maven
@@ -90,6 +97,7 @@ openjdk-11-maven:
 #oracle-jdk8-maven:
 #  image: google/cloud-sdk:latest
 #  stage: step2
+#  artifacts: {}
 #  allow_failure: true
 #  script:
 #    - pushd oracle-jdk8-maven
@@ -101,6 +109,7 @@ openjdk-11-maven:
 openjdk-8-maven-nodejs:
   image: google/cloud-sdk:latest
   stage: step3
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-8-maven-nodejs
@@ -112,6 +121,7 @@ openjdk-8-maven-nodejs:
 openjdk-11-maven-nodejs:
   image: google/cloud-sdk:latest
   stage: step3
+  artifacts: {}
   allow_failure: false
   script:
     - pushd openjdk-11-maven-nodejs
@@ -123,6 +133,7 @@ openjdk-11-maven-nodejs:
 #oracle-jdk8-maven-nodejs:
 #  image: google/cloud-sdk:latest
 #  stage: step3
+#  artifacts: {}
 #  allow_failure: true
 #  script:
 #    - pushd oracle-jdk8-maven-nodejs
