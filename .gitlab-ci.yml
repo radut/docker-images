@@ -58,6 +58,18 @@ openjdk-11:
     - bash push.sh
     - popd
 
+openjdk-12:
+  image: google/cloud-sdk:latest
+  stage: step1
+  artifacts: {}
+  allow_failure: false
+  script:
+    - pushd openjdk-12
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
 #oracle-jdk8:
 #  image: google/cloud-sdk:latest
 #  stage: step1
@@ -89,6 +101,18 @@ openjdk-11-maven:
   allow_failure: false
   script:
     - pushd openjdk-11-maven
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
+openjdk-12-maven:
+  image: google/cloud-sdk:latest
+  stage: step2
+  artifacts: {}
+  allow_failure: false
+  script:
+    - pushd openjdk-12-maven
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
@@ -129,6 +153,19 @@ openjdk-11-maven-nodejs:
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
     - popd
+
+openjdk-12-maven-nodejs:
+  image: google/cloud-sdk:latest
+  stage: step3
+  artifacts: {}
+  allow_failure: false
+  script:
+    - pushd openjdk-12-maven-nodejs
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
 
 #oracle-jdk8-maven-nodejs:
 #  image: google/cloud-sdk:latest
