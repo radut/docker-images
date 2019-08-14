@@ -7,7 +7,7 @@ RUN \
   DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common curl && \
   add-apt-repository ppa:openjdk-r/ppa && \
   apt-get update && \
-  apt-get install -y ca-certificates openjdk-12-jdk-headless
+  apt-get install -y openjdk-12-jdk-headless
 
 RUN echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")" >> /etc/profile
 RUN export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")
