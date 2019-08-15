@@ -62,7 +62,7 @@ openjdk-12:
   image: google/cloud-sdk:latest
   stage: step1
   artifacts: {}
-  allow_failure: false
+  allow_failure: true
   script:
     - pushd openjdk-12
     - bash build.sh
@@ -110,7 +110,7 @@ openjdk-12-maven:
   image: google/cloud-sdk:latest
   stage: step2
   artifacts: {}
-  allow_failure: false
+  allow_failure: true
   script:
     - pushd openjdk-12-maven
     - bash build.sh
@@ -158,7 +158,7 @@ openjdk-12-maven-nodejs:
   image: google/cloud-sdk:latest
   stage: step3
   artifacts: {}
-  allow_failure: false
+  allow_failure: true
   script:
     - pushd openjdk-12-maven-nodejs
     - bash build.sh
