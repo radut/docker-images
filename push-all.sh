@@ -44,6 +44,18 @@ pushd openjdk-12-maven-nodejs
 bash push.sh
 popd
 
+pushd openjdk-13
+bash push.sh
+popd
+
+pushd openjdk-13-maven
+bash push.sh
+popd
+
+pushd openjdk-13-maven-nodejs
+bash push.sh
+popd
+
 #pushd oracle-jdk8
 #bash push.sh
 #popd
