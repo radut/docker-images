@@ -5,7 +5,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common curl && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common ca-certificates curl && \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \

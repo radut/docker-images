@@ -4,9 +4,10 @@ MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common curl && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common ca-certificates curl && \
   add-apt-repository ppa:openjdk-r/ppa && \
   apt-get update && \
+  apt-get install -y ca-certificates-java && \
   apt-get install -y openjdk-11-jdk-headless
 
 RUN echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")" >> /etc/profile
