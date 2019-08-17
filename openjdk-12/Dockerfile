@@ -8,7 +8,7 @@ RUN \
   add-apt-repository ppa:openjdk-r/ppa && \
   apt-get update && \
   apt-get install -y ca-certificates-java openjdk-12-jdk-headless && \
-  apt-get purge -y openjdk-11-jdk-headless
+  apt-get purge -y openjdk-11-*
 
 RUN echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")" >> /etc/profile
 RUN export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")
