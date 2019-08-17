@@ -12,7 +12,7 @@ ARG HELM_VERSION=v2.14.1
 RUN export PIP_DEFAULT_TIMEOUT=300
 ENV PIP_DEFAULT_TIMEOUT=300
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 pbr hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config==1.28.0 shade==1.26.0 netaddr notario openstacksdk python-openstacksdk python-openstackclient
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 pbr hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config==1.28.0 shade==1.26.0 netaddr notario openstacksdk python-openstacksdk python-openstackclient
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
