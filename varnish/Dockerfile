@@ -36,6 +36,16 @@ RUN \
     && make install \
     && rm -rf /tmp/varnish-modules-0.15.0 /tmp/varnish-modules-0.15.0.tar.gz
 
+RUN \
+    git clone https://github.com/nigoroll/libvmod-dynamic.git /tmp/libvmod-dynamic \
+    && cd /tmp/libvmod-dynamic \
+    && git checkout 6.0 \
+    && ./configure \
+    && make \
+    && make install \
+    && rm -rf /tmp/libvmod-dynamic
+
+
 # Install custom entrypoint
 COPY ./entrypoint.sh /usr/local/bin/docker-custom-entrypoint
 RUN chmod 777 /usr/local/bin/docker-custom-entrypoint
