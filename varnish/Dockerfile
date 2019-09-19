@@ -7,7 +7,7 @@ MAINTAINER Radu Toader <radu.m.toader@gmail.com>
 RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common ca-certificates curl && \
-  add-apt-repository ppa:openjdk-r/ppa && \
+  add-apt-repository deb https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
         automake \
@@ -40,6 +40,7 @@ RUN \
     git clone https://github.com/nigoroll/libvmod-dynamic.git /tmp/libvmod-dynamic \
     && cd /tmp/libvmod-dynamic \
     && git checkout 6.0 \
+    && ./autogen.sh \
     && ./configure \
     && make \
     && make install \
