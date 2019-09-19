@@ -34,6 +34,18 @@ terraform-ansible:
     - bash push.sh
     - popd
 
+varnish:
+  image: google/cloud-sdk:latest
+  stage: step1
+  artifacts: {}
+  allow_failure: false
+  script:
+    - pushd varnish
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
 openjdk-8:
   image: google/cloud-sdk:latest
   stage: step1

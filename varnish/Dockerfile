@@ -19,6 +19,8 @@ RUN \
         wget \
         pkg-config \
         python-docutils \
+        libgetdns-dev \
+        libgetdns1 \
         libvarnishapi-dev \
         varnish \
     && apt-get clean

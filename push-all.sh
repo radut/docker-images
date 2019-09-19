@@ -56,6 +56,10 @@ pushd openjdk-13-maven-nodejs
 bash push.sh
 popd
 
+pushd varnish
+bash build.sh
+popd
+
 #pushd oracle-jdk8
 #bash push.sh
 #popd
