@@ -20,7 +20,7 @@ RUN \
         pkg-config \
         python-docutils \
         libgetdns-dev \
-        libgetdns1 \
+        libgetdns10 \
         libvarnishapi-dev \
         varnish \
     && apt-get clean
