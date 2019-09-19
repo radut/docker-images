@@ -16,6 +16,7 @@ RUN \
         git \
         libtool \
         make \
+        wget \
         pkg-config \
         python-docutils \
         libvarnishapi-dev \
@@ -29,7 +30,7 @@ RUN \
     && tar -xf varnish-modules-0.15.0.tar.gz \
     && cd /tmp/varnish-modules-0.15.0 \
     && ./configure \
-    && ./make \
+    && make \
     && make install \
     && rm -rf /tmp/varnish-modules-0.15.0 /tmp/varnish-modules-0.15.0.tar.gz
 
