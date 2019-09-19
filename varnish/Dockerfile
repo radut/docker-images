@@ -6,8 +6,10 @@ MAINTAINER Radu Toader <radu.m.toader@gmail.com>
 # Install Varnish dependencies
 RUN \
   apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common ca-certificates curl && \
-  add-apt-repository deb https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common ca-certificates curl wget && \
+  wget -O varnish.key https://packagecloud.io/varnishcache/varnish60lts/gpgkey && \
+  apt-key add varnish.key && \
+  echo  "deb https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main" >> /etc/apt/sources.list.d/varnish.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
         automake \
@@ -21,7 +23,8 @@ RUN \
         python-docutils \
         libgetdns-dev \
         libgetdns10 \
-        libvarnishapi-dev \
+#        libvarnishapi-dev \
+        varnish-dev \
         varnish \
     && apt-get clean
 
