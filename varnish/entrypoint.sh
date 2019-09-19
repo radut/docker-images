@@ -10,6 +10,6 @@ varnishd \
     -T ":${VARNISH_ADMIN_PORT}" \
     -f "/etc/varnish/default.vcl" \
     -S "/etc/varnish/secret" \
-    -s "malloc,512m" \
+    -s "${VARNISH_CACHE_STORE:-malloc,512m}" \
     -p "feature=+esi_disable_xml_check" -p "vcc_allow_inline_c=on" -p "cli_buffer=32768" \
     -F
