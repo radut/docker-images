@@ -54,3 +54,4 @@ RUN \
 COPY ./entrypoint.sh /usr/local/bin/docker-custom-entrypoint
 RUN chmod 777 /usr/local/bin/docker-custom-entrypoint
 ENTRYPOINT ["docker-custom-entrypoint"]
+

@@ -17,6 +17,7 @@ else
     echo "Using $UUID secret"
 fi
 
+
 varnishd \
     -a ":${VARNISH_LISTENING_PORT:-80}" \
     -T ":${VARNISH_ADMIN_PORT:-6082}" \
