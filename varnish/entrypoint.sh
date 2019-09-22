@@ -24,6 +24,5 @@ varnishd \
     -S "/etc/varnish/secret" \
     -s "${VARNISH_CACHE_STORE:-malloc,512m}" \
     -p "feature=+esi_disable_xml_check" \
-    -p "vcc_allow_inline_c=on"
-#    -p "cli_buffer=32768" \
-#    -F
+    -p "vcc_allow_inline_c=on" \
+    -F
