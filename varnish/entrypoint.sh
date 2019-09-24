@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#set -euo pipefail
+set -e pipefail
 
 if [ ! -z "${VARNISH_BACKEND_HOST}" ] ;then
     host_replace_expression=".host = \".+\"/.host = \"${VARNISH_BACKEND_HOST}\""
