@@ -26,3 +26,6 @@ RUN update-ca-certificates
 #RUN printf 'changeit\nchangeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x3-cross-signed.crt -alias lets-encrypt-x3-cross-signed -keystore /etc/ssl/certs/java/cacerts
 #RUN printf 'changeit\nchangeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x4-cross-signed.crt -alias lets-encrypt-x4-cross-signed -keystore /etc/ssl/certs/java/cacerts
 #RUN printf 'changeit\nchangeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/IdenTrust-root.crt -alias IdenTrust-root -keystore /etc/ssl/certs/java/cacerts
+
+RUN mkdir /build
+WORKDIR /build
