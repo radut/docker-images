@@ -7,6 +7,6 @@ ENV MAVEN_HOME /usr/share/maven
 
 RUN \
   mkdir -p "${MAVEN_HOME}" && \
-  curl -fsSL http://apache.javapipe.com/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
+  curl -fsSL https://www-us.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
   | tar -xzC "${MAVEN_HOME}" --strip-components=1 && \
   ln -s "${MAVEN_HOME}"/bin/mvn /usr/bin/mvn
