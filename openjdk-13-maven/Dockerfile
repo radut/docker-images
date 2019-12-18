@@ -1,7 +1,7 @@
 FROM radut/openjdk-13
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-ARG MAVEN_VERSION=3.6.1
+ARG MAVEN_VERSION=3.6.3
 
 ENV MAVEN_HOME /usr/share/maven
 
