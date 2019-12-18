@@ -1,7 +1,7 @@
 FROM radut/openjdk-8-maven
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-ARG NODE_VERSION=10.15.0
+ARG NODE_VERSION=13.4.0
 
 
 RUN groupadd --gid 1000 node \
