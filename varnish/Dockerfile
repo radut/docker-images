@@ -23,6 +23,7 @@ RUN \
         python-docutils \
         libgetdns-dev \
         libgetdns10 \
+        getdns-utils \
 #        libvarnishapi-dev \
         varnish-dev \
         varnish \
