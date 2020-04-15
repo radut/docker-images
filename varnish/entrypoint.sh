@@ -17,6 +17,7 @@ else
     echo "Using $UUID secret"
 fi
 
+#bash -c "while [ true ] ; do varnishreload; sleep 5; done" &
 
 varnishd \
     -a ":${VARNISH_LISTENING_PORT:-80}" \
