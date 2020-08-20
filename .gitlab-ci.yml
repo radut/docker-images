@@ -22,6 +22,18 @@ ubuntu:
     - bash push.sh
     - popd
 
+rbd:
+  image: google/cloud-sdk:latest
+  stage: build
+  artifacts: {}
+  allow_failure: false
+  script:
+    - pushd rbd
+    - bash build.sh
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+    - bash push.sh
+    - popd
+
 terraform-ansible:
   image: google/cloud-sdk:latest
   stage: build
