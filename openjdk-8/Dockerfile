@@ -20,11 +20,13 @@ RUN rngd -r /dev/urandom
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
-RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x1-cross-signed.crt -alias lets-encrypt-x1-cross-signed -keystore /etc/ssl/certs/java/cacerts
-RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x2-cross-signed.crt -alias lets-encrypt-x2-cross-signed -keystore /etc/ssl/certs/java/cacerts
-RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x3-cross-signed.crt -alias lets-encrypt-x3-cross-signed -keystore /etc/ssl/certs/java/cacerts
-RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-x4-cross-signed.crt -alias lets-encrypt-x4-cross-signed -keystore /etc/ssl/certs/java/cacerts
-RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/IdenTrust-root.crt -alias IdenTrust-root -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/isrgrootx1.crt -alias isrgrootx1 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/isrg-root-x2.crt -alias isrg-root-x2 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-e1.crt -alias lets-encrypt-e1 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-e2.crt -alias lets-encrypt-e2 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-r3.crt -alias lets-encrypt-r3 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-r4.crt -alias lets-encrypt-r4 -keystore /etc/ssl/certs/java/cacerts
+RUN printf 'changeit\nyes' | keytool -import -file  /usr/local/share/ca-certificates/lets-encrypt-r4-cross-signed.crt -alias lets-encrypt-r4-cross-signed -keystore /etc/ssl/certs/java/cacerts
 
 RUN mkdir /build
 WORKDIR /build
