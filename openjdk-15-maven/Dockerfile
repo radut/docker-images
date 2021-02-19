@@ -1,4 +1,4 @@
-FROM radut/openjdk-13
+FROM radut/openjdk-15
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG MAVEN_VERSION=3.6.3

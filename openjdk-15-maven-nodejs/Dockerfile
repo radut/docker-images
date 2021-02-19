@@ -1,4 +1,4 @@
-FROM radut/openjdk-13-maven
+FROM radut/openjdk-15-maven
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 ARG NODE_VERSION=12.14.0

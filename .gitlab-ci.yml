@@ -94,13 +94,13 @@ openjdk-12:
     - bash push.sh
     - popd
 
-openjdk-13:
+openjdk-15:
   image: google/cloud-sdk:latest
   stage: step1
   artifacts: {}
   allow_failure: true
   script:
-    - pushd openjdk-13
+    - pushd openjdk-15
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
@@ -154,13 +154,13 @@ openjdk-12-maven:
     - bash push.sh
     - popd
 
-openjdk-13-maven:
+openjdk-15-maven:
   image: google/cloud-sdk:latest
   stage: step2
   artifacts: {}
   allow_failure: true
   script:
-    - pushd openjdk-13-maven
+    - pushd openjdk-15-maven
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh
@@ -214,13 +214,13 @@ openjdk-12-maven-nodejs:
     - bash push.sh
     - popd
 
-openjdk-13-maven-nodejs:
+openjdk-15-maven-nodejs:
   image: google/cloud-sdk:latest
   stage: step3
   artifacts: {}
   allow_failure: true
   script:
-    - pushd openjdk-13-maven-nodejs
+    - pushd openjdk-15-maven-nodejs
     - bash build.sh
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
     - bash push.sh

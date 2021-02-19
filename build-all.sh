@@ -44,15 +44,15 @@ pushd openjdk-12-maven-nodejs
 bash build.sh
 popd
 
-pushd openjdk-13
+pushd openjdk-15
 bash build.sh
 popd
 
-pushd openjdk-13-maven
+pushd openjdk-15-maven
 bash build.sh
 popd
 
-pushd openjdk-13-maven-nodejs
+pushd openjdk-15-maven-nodejs
 bash build.sh
 popd
 
