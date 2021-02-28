@@ -1,5 +1,5 @@
-#FROM ubuntu:18
-FROM radut/ubuntu
+FROM ubuntu:18.04
+#FROM radut/ubuntu
 
 MAINTAINER Radu Toader <radu.m.toader@gmail.com>
 
