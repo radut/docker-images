@@ -20,7 +20,10 @@ ENV PIP_DEFAULT_TIMEOUT=300
 
 ADD openstack.txt openstack.txt
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip && pip install jinja2 hvac ansible-modules-hashivault yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario && pip install -r openstack.txt
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/London
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python3-pip wget unzip && pip install jinja2 hvac ansible-modules-hashivault yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario && pip install -r openstack.txt
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
