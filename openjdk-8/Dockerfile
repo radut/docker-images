@@ -11,6 +11,7 @@ RUN \
 
 RUN echo "JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")" >> /etc/profile
 RUN export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::" | sed "s:bin/java::")
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # runtime dependency for Tomcat Native Libraries
 RUN apt-get install -y libapr1 haveged rng-tools
