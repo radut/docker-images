@@ -28,7 +28,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip
 RUN pip install jinja2 hvac ansible-modules-hashivault yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
 RUN pip install openstack-requirements
-RUN pip isntall -r openstack.txt
+RUN pip install -r openstack.txt
 #RUN pip install python-openstackclient
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
