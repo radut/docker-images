@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 #ARG ANSIBLE_VERSION=2.8.1.0
