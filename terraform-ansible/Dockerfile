@@ -25,7 +25,11 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev python-pip wget unzip
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev wget unzip
+RUN add-apt-repository universe
+RUN apt update && apt install python2
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+RUN python2 get-pip.py
 RUN pip install jinja2 hvac ansible-modules-hashivault yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
 RUN pip install openstack-requirements
 RUN pip install -r openstack.txt
