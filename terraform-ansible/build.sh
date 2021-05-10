@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t radut/terraform-ansible .
+docker build --no-cache -t radut/terraform-ansible .
