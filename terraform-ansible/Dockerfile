@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
 #ARG ANSIBLE_VERSION=2.8.1.0
@@ -34,7 +34,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-g
 ### end python3
 ### start python2
 RUN add-apt-repository universe
-RUN apt update && apt -y install python2
+#RUN apt update && apt -y install python2
+RUN apt update && apt -y install python
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 RUN python2 get-pip.py
 ### end python2
