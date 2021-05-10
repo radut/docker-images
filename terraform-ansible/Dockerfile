@@ -30,10 +30,10 @@ RUN add-apt-repository universe
 RUN apt update && apt -y install python2
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 RUN python2 get-pip.py
-RUN pip install jinja2 hvac ansible-modules-hashivault yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
-RUN pip install openstack-requirements
+RUN pip install jinja2 hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
+#RUN pip install openstack-requirements
 RUN pip install -r openstack.txt
-#RUN pip install python-openstackclient
+RUN pip install python-openstackclient
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
