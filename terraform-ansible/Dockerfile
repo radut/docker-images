@@ -26,17 +26,22 @@ ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y install software-properties-common apt-utils rsync sshpass curl git cpio bzip2 jq vim net-tools iputils-ping telnet netcat pkg-config libfontconfig1-dev wget unzip
-#RUN add-apt-repository universe
-#RUN apt update && apt -y install python2
-#RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
-#RUN python2 get-pip.py
-RUN apt -y install python3 python3-pip
-#RUN alias python=python3 && echo "alias python=python3" >>/etc/profile
-RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN pip3 install jinja2 hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
-RUN pip3 install openstack-requirements
-RUN pip3 install python-openstackclient
-RUN pip3 install -r openstack.txt
+### start python3
+# RUN apt -y install python3 python3-pip
+# RUN alias python=python3 && echo "alias python=python3" >>/etc/profile
+# RUN ln -s /usr/bin/python3 /usr/bin/python
+# RUN ln -s /usr/bin/pip3 /usr/bin/pip
+### end python3
+### start python2
+RUN add-apt-repository universe
+RUN apt update && apt -y install python2
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+RUN python2 get-pip.py
+### end python2
+RUN pip install jinja2 hvac ansible-modules-hashivault netaddr yasha ansible==${ANSIBLE_VERSION} os_client_config shade notario
+RUN pip install openstack-requirements
+RUN pip install python-openstackclient
+RUN pip install -r openstack.txt
 COPY letsencrypt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
