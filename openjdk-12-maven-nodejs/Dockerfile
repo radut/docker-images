@@ -1,7 +1,7 @@
 FROM radut/openjdk-12-maven
 MAINTAINER Radu Toader radu.m.toader@gmail.com
 
-ARG NODE_VERSION=12.14.0
+ARG NODE_VERSION=14.17.3
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
