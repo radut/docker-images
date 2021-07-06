@@ -17,5 +17,5 @@ RUN \
   mkdir -p "${GRADLE_HOME}" && \
   curl -kfsSL -o gradle-${GRADLE_VERSION}-bin.zip https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip  && \
   unzip gradle-${GRADLE_VERSION}-bin.zip && \
-  mv gradle-${GRADLE_VERSION}/* ${GRADLE_HOME}/ &&
+  mv gradle-${GRADLE_VERSION}/* ${GRADLE_HOME}/ && \
   ln -s "${GRADLE_HOME}"/bin/gradle /usr/bin/gradle
